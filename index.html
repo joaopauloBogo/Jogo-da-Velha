@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo da Velha</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="side-panel">
+        <label for="player1">Jogador 1:</label>
+        <input type="text" id="player1" placeholder="Nome do Jogador 1">
+        <span id="player1-wins" class="preto">Vitórias: 0</span>
+        <button class="azul" onclick="cadastrarJogador(1)">Cadastrar</button>
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <script src="./assets/js/script.js"></script>
+    </div>
+
+    <div id="game-board">
+        <div class="cell" onclick="clicarCelula(this)"></div>
+        <div class="cell" onclick="clicarCelula(this)"></div>
+        <div class="cell" onclick="clicarCelula(this)"></div>
+        <div class="cell" onclick="clicarCelula(this)"></div>
+        <div class="cell" onclick="clicarCelula(this)"></div>
+        <div class="cell" onclick="clicarCelula(this)"></div>
+        <div class="cell" onclick="clicarCelula(this)"></div>
+        <div class="cell" onclick="clicarCelula(this)"></div>
+        <div class="cell" onclick="clicarCelula(this)"></div>
+    </div>
+
+    <div class="side-panel">
+        <label for="player2">Jogador 2:</label>
+        <input type="text" id="player2" placeholder="Nome do Jogador 2">
+        <span id="player2-wins" class="preto">Vitórias: 0</span>
+        <button class="azul" onclick="cadastrarJogador(2)">Cadastrar</button>
+        <label for="computer-checkbox" id="pc" class="preto">Jogar contra o Computador:</label>
+        <input type="checkbox" id="computer-checkbox" onchange="toggleModoComputador()">
+        <button class="azul" onclick="toggleModoDoisJogadores()">Modo de Dois Jogadores</button>
+    </div>
+
+    <div class="botoes-abaixo">
+        <button class="azul" onclick="resetJogo()">Resetar Jogo</button>
+    </div>
+</div>
+
+</body>
+</html>
